@@ -14,9 +14,13 @@ public class TransactionMenu implements Menu { //implements interface
       //while condition for if finished == false
 
     System.out.println("to Display current balance enter 1");
+    System.out.println();
     System.out.println("To deposit, enter 2");
+    System.out.println();
     System.out.println("To withdraw, enter 3");
+    System.out.println();
     System.out.println("To exit the atm, enter 4");
+    System.out.println();
     System.out.print(":)");
     //displays the menu options for the user
     String response = scan.nextLine();
