@@ -63,12 +63,15 @@ public class Login implements Menu { //implements Menu
 			else if(validUser == false) //condition for if validUser remains false
 			 { //first else if curly brackets
 				 System.out.println("Wrong username.");
+				 //put play again option here, and if they're wrong a second time, exit program
+				 //program doesn't immediately exit if the username is wrong
 				 System.exit(0); //exits program
 			 }
 
 				 else if (validPass == false) //condition for if validPass remains false
 				 { //second else if curly brackets
 					 System.out.println("Wrong password.");
+					 //put play again option here, and if they're wrong a second time, exit program
 					 System.exit(0); //exits program
 				 }
 
