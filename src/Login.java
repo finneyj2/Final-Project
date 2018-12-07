@@ -11,6 +11,7 @@ public class Login implements Menu { //implements Menu
 		Scanner scan = new Scanner(System.in);
 		String answer; //initializes string answer
 		String username; //userID goes into customers
+		String tryAgain;//for tryAgain option
 		String password; //initializes string password
 		boolean validPass = false;
 		boolean validUser = false;
@@ -65,6 +66,13 @@ public class Login implements Menu { //implements Menu
 				 System.out.println("Wrong username.");
 				 //put play again option here, and if they're wrong a second time, exit program
 				 //program doesn't immediately exit if the username is wrong
+				 System.out.println("Would you like to try again?");
+				 String tryagain;
+				 tryagain = scan.nextLine();
+				 while(tryagain.equals("yes")){
+				 	//break up into smaller methods
+				 Tryagain hope = new Tryagain();
+				 }
 				 System.exit(0); //exits program
 			 }
 
