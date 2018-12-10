@@ -79,8 +79,11 @@ public void ifYes() {
 				 	//break up into smaller methods
 				 //Tryagain hope = new Tryagain();
 				 }
+				 if(tryagain.equals("no")){
+				 System.exit(0); //exits program 
+				 }
 
-				 System.exit(0); //exits program
+
 			 }
 
 				 else if (validPass == false) //condition for if validPass remains false
