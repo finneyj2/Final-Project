@@ -79,6 +79,7 @@ public void ifYes() {
 				 	//break up into smaller methods
 				 //Tryagain hope = new Tryagain();
 				 }
+
 				 System.exit(0); //exits program
 			 }
 
