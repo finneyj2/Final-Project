@@ -3,23 +3,28 @@ import java.util.Scanner; //imports scanner
 
 public class Login implements Menu { //implements Menu
 
+	FileUtility everything = new FileUtility("customers.txt");
+	Scanner scan = new Scanner(System.in);
+	String answer; //initializes string answer
+	String username; //userID goes into customers
+	String tryAgain;//for tryAgain option
+	String password; //initializes string password
+	boolean validPass = false;
+	boolean validUser = false;
+	String[] info = new String[]{"", "", ""}; //creates string array and string literal
 
-	public void displayMenu()
-	{
-
-		FileUtility everything = new FileUtility("customers.txt");
-		Scanner scan = new Scanner(System.in);
-		String answer; //initializes string answer
-		String username; //userID goes into customers
-		String tryAgain;//for tryAgain option
-		String password; //initializes string password
-		boolean validPass = false;
-		boolean validUser = false;
-
-
+	public void displayMenu() {
 		System.out.print("Do you already have an account? Please type yes or no.");
 		answer = scan.nextLine(); //stores user input into answer
-		String[] info = new String[]{"", "", ""}; //creates string array and string literal
+		if(answer.equals("yes")){
+			ifYes();
+		}
+
+
+}
+
+public void ifYes() {
+
 		if (answer.equals("yes")) //if statement for when answer = yes
 	{
 
@@ -70,8 +75,9 @@ public class Login implements Menu { //implements Menu
 				 String tryagain;
 				 tryagain = scan.nextLine();
 				 while(tryagain.equals("yes")){
+					 ifYes();
 				 	//break up into smaller methods
-				 Tryagain hope = new Tryagain();
+				 //Tryagain hope = new Tryagain();
 				 }
 				 System.exit(0); //exits program
 			 }
@@ -93,9 +99,9 @@ public class Login implements Menu { //implements Menu
 			original.createU(); //calls method createU
 
 		} //else bracket
+
+
 }
-
-
 
 
 }
