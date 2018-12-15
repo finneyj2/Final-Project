@@ -1,7 +1,7 @@
 //this work is the result of my own efforts unless otherwise cited. I consulted TAs and a tutor for assistance with this project
 import java.util.Scanner; //imports scanner
 
-public class Login implements Menu { //implements Menu
+public class Login implements Menu { //implements Menu and also class opening brackets
 
 	FileUtility everything = new FileUtility("customers.txt");
 	Scanner scan = new Scanner(System.in);
@@ -18,6 +18,9 @@ public class Login implements Menu { //implements Menu
 		answer = scan.nextLine(); //stores user input into answer
 		if(answer.equals("yes")){
 			ifYes();
+		}
+		else{
+			ifNo();
 		}
 
 
@@ -66,9 +69,9 @@ public void ifYes() {
 
 
 
-			else if(validUser == false) //condition for if validUser remains false
+			else if(validUser || validPass == false) //condition for if validUser remains false
 			 { //first else if curly brackets
-				 System.out.println("Wrong username.");
+				 System.out.println("Wrong username or password.");
 				 //put play again option here, and if they're wrong a second time, exit program
 				 //program doesn't immediately exit if the username is wrong
 				 System.out.println("Would you like to try again?");
@@ -80,24 +83,24 @@ public void ifYes() {
 				 //Tryagain hope = new Tryagain();
 				 }
 				 if(tryagain.equals("no")){
-				 System.exit(0); //exits program 
+				 System.exit(0); //exits program
 				 }
 
 
 			 }
 
-				 else if (validPass == false) //condition for if validPass remains false
+/*				 else if (validPass == false) //condition for if validPass remains false
 				 { //second else if curly brackets
 					 System.out.println("Wrong password.");
 					 //put play again option here, and if they're wrong a second time, exit program
 					 System.exit(0); //exits program
 				 }
-
+*/
 	 } //first if ending brackets
+}
+public void ifNo(){//ifNo opening brackets
 
-
-
-		else
+		if(answer.equals("no"))
 		{ //else bracket
 			Customer original = new Customer(); //creates an object from Customer
 			original.createU(); //calls method createU
@@ -105,7 +108,7 @@ public void ifYes() {
 		} //else bracket
 
 
-}
+}//ifNo ending brackets
 
 
-}
+}//class ending brackets
