@@ -1,25 +1,33 @@
 //this work is the result of my own efforts unless otherwise cited. I consulted TAs and a tutor for assistance with this project
 import java.util.Scanner; //imports scanner
 
-public class Login implements Menu { //implements Menu
+public class Login implements Menu { //implements Menu and also class opening brackets
 
+	FileUtility everything = new FileUtility("customers.txt");
+	Scanner scan = new Scanner(System.in);
+	String answer; //initializes string answer
+	String username; //userID goes into customers
+	String tryAgain;//for tryAgain option
+	String password; //initializes string password
+	boolean validPass = false;
+	boolean validUser = false;
+	String[] info = new String[]{"", "", ""}; //creates string array and string literal
 
-	public void displayMenu()
-	{
-
-		FileUtility everything = new FileUtility("customers.txt");
-		Scanner scan = new Scanner(System.in);
-		String answer; //initializes string answer
-		String username; //userID goes into customers
-		String tryAgain;//for tryAgain option
-		String password; //initializes string password
-		boolean validPass = false;
-		boolean validUser = false;
-
-
+	public void displayMenu() {
 		System.out.print("Do you already have an account? Please type yes or no.");
 		answer = scan.nextLine(); //stores user input into answer
-		String[] info = new String[]{"", "", ""}; //creates string array and string literal
+		if(answer.equals("yes")){
+			ifYes();
+		}
+		else{
+			ifNo();
+		}
+
+
+}
+
+public void ifYes() {
+
 		if (answer.equals("yes")) //if statement for when answer = yes
 	{
 
@@ -61,41 +69,46 @@ public class Login implements Menu { //implements Menu
 
 
 
-			else if(validUser == false) //condition for if validUser remains false
+			else if(validUser || validPass == false) //condition for if validUser remains false
 			 { //first else if curly brackets
-				 System.out.println("Wrong username.");
+				 System.out.println("Wrong username or password.");
 				 //put play again option here, and if they're wrong a second time, exit program
 				 //program doesn't immediately exit if the username is wrong
 				 System.out.println("Would you like to try again?");
 				 String tryagain;
 				 tryagain = scan.nextLine();
 				 while(tryagain.equals("yes")){
+					 ifYes();
 				 	//break up into smaller methods
-				 Tryagain hope = new Tryagain();
+				 //Tryagain hope = new Tryagain();
 				 }
+				 if(tryagain.equals("no")){
 				 System.exit(0); //exits program
+				 }
+
+
 			 }
 
-				 else if (validPass == false) //condition for if validPass remains false
+/*				 else if (validPass == false) //condition for if validPass remains false
 				 { //second else if curly brackets
 					 System.out.println("Wrong password.");
 					 //put play again option here, and if they're wrong a second time, exit program
 					 System.exit(0); //exits program
 				 }
-
+*/
 	 } //first if ending brackets
+}
+public void ifNo(){//ifNo opening brackets
 
-
-
-		else
+		if(answer.equals("no"))
 		{ //else bracket
 			Customer original = new Customer(); //creates an object from Customer
 			original.createU(); //calls method createU
 
 		} //else bracket
-}
 
 
+}//ifNo ending brackets
 
 
-}
+}//class ending brackets
