@@ -1,10 +1,10 @@
 
-#Project
+# Project
 
 An Atm machine simulator that allows the user to login, then check their balance, deposit, withdraw money, etc
 
-##Getting Started
-#Prerequisites
+## Getting Started
+# Prerequisites
 
 java
 Some kind of textfile document, preferably
@@ -17,7 +17,7 @@ to separate by semicolon, [0] = Customer name,
 [1] = userID/username, [2] = accountID, [3] =
 password, [4] = snn.
 
-#Running & Testing The Program
+# Running & Testing The Program
 
 To run the program, open your terminal in the
 src folder of the Atm repository. Compile the
