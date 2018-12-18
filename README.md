@@ -14,8 +14,8 @@ Some kind of textfile document, preferably
 word.The accounts for the program are kept in
 Customer.txt(username and password), and
 accounts(account number and balance). To login
-to the atm machine, first both text files need
-to have text.  For Customer.txt, and remember
+to the atm, first both text files need
+to have text. For Customer.txt, and remember
 to separate by semicolon, [0] = Customer name,
 [1] = userID/username, [2] = accountID, [3] =
 password, [4] = snn.
