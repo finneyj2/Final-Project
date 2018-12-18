@@ -13,7 +13,7 @@ public class Customer
     String userID; //initializes userID
     boolean honesty = false;
 
-    System.out.println("Whata is your name?");
+    System.out.println("What is your name?");
     answer = scan.nextLine(); //stores user input for name
     System.out.println("Create your own ID");
 		userID = scan.nextLine(); //stores user input for userID

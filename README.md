@@ -1,9 +1,19 @@
+
 #Project:
 Atm machine
+
 ##Getting Started
 #Prerequisites:
 java
-Some kind of textfile document, preferably word.The accounts for the program are kept in Customer.txt(username and password), and accounts(account number and balance). To login to the atm machine, first both text files need to have text.  For Customer.txt,
+Some kind of textfile document, preferably
+word.The accounts for the program are kept in
+Customer.txt(username and password), and
+accounts(account number and balance). To login
+to the atm machine, first both text files need
+to have text.  For Customer.txt, and remember
+to separate by semicolon, [0] = Customer name,
+[1] = userID/username, [2] = accountID, [3] =
+password, [4] = snn.
 #Running & Testing The Program:
 To run the program, open your terminal in the
 src folder of the Atm repository. Compile the
