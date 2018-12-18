@@ -8,7 +8,6 @@ public class Atm
     {
       Login atm = new Login(); //creates new object from login
       atm.displayMenu(); //calls specific method
-      System.out.println("Hi");
       TransactionMenu menu = new TransactionMenu(); //creates a new object from TransactionMenu
       menu.displayMenu(); //calls a specific method
 

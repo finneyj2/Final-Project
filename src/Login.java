@@ -77,7 +77,7 @@ public void ifYes() {
 				 System.out.println("Would you like to try again?");
 				 String tryagain;
 				 tryagain = scan.nextLine();
-				 while(tryagain.equals("yes")){
+				 if(tryagain.equals("yes")){
 					 ifYes();
 				 	//break up into smaller methods
 				 //Tryagain hope = new Tryagain();
