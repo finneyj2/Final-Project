@@ -1,6 +1,7 @@
 
 #Project:
-Atm machine
+
+An Atm machine simulator that allows the user to login, then check their balance, deposit, withdraw money, etc
 
 ##Getting Started
 #Prerequisites:
