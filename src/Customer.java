@@ -17,7 +17,7 @@ public class Customer
     answer = scan.nextLine(); //stores user input for name
     System.out.println("Create your own ID");
 		userID = scan.nextLine(); //stores user input for userID
-    System.out.println("Create your accountID");
+    System.out.println("Enter your accountID");
     accountID = scan.nextLine(); //stores user input for accountID
     System.out.println("Create your password?");
     password = scan.nextLine(); //stores user input for password

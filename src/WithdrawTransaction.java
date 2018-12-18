@@ -22,6 +22,7 @@ public class WithdrawTransaction extends Transaction  //extends Transaction/inhe
             if(take < 0) //if statement for condition
             { //if statement for if they overdraw
               System.out.println("You've overdrawn your bank account.");
+              System.out.println("Your current balance(overdrawn) is now" + take);
             }
 
             else { //else statement for if they don't overdraw
